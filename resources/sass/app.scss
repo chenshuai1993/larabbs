@@ -77,6 +77,9 @@ body {
 
 
 /* Topic Index Page */
+
+@import "topic_body";
+
 .topics-index-page  .categories-show-page {
   .topic-list {
     .nav>li>a {
@@ -116,4 +119,7 @@ body {
 /* Add container and footer space */
 #app > div.container {
   margin-bottom: 100px;
+}
+.simditor-body img {
+  max-width:100%;
 }
