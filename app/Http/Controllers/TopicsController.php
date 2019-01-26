@@ -37,7 +37,7 @@ class TopicsController extends Controller
 	public function create(Topic $topic)
 	{
 		$categories = Category::all();
-        return view('topics.create_and_edit', compact('topic', 'categories'));
+		return view('topics.create_and_edit', compact('topic', 'categories'));
 	}
 
 	public function store(TopicRequest $request, Topic $topic)
@@ -45,7 +45,7 @@ class TopicsController extends Controller
 		$topic->fill($request->all());
 		$topic->user_id = Auth::id();
 		$topic->save();
-		return redirect()->route($topic->link(), $topic->id)->with('message', '帖子创建成功！');
+		return redirect()->route('topics.index', $topic->id)->with('message', '帖子创建成功！');
 	}
 
 	public function edit(Topic $topic)
