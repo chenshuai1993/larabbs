@@ -19,7 +19,7 @@ class UsersController extends Controller
     public function show(User $user)
     {
     	# code...
-    	return view('users.show', compact('user'));
+        return view('users.show', compact('user'));
     	
     }
 
